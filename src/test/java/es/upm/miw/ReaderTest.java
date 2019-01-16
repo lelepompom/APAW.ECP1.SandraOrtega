@@ -14,13 +14,30 @@ public class ReaderTest {
     }
 
     @Test
-    void testName() {
+    void testId(){
+        assertEquals("", this.reader.getId());
+    }
+
+    @Test
+    void testGetName() {
         assertEquals("Almudena", reader.getName());
     }
 
     @Test
-    void testAge() {
+    void testSetName() {
+        reader.setName("Almu");
+        assertEquals("Almu", reader.getName());
+    }
+
+    @Test
+    void testGetAge() {
         assertEquals("25", reader.getAge().toString());
+    }
+
+    @Test
+    void testSetAge() {
+        reader.setAge(41);
+        assertEquals("41", reader.getAge().toString());
     }
 
 }

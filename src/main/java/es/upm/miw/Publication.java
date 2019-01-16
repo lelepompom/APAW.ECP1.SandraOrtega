@@ -25,10 +25,6 @@ public class Publication {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
     public Boolean getSigned() {
         return signed;
     }
@@ -39,10 +35,6 @@ public class Publication {
 
     public LocalDateTime getPubliDate() {
         return publiDate;
-    }
-
-    public void setPubliDate(LocalDateTime publiDate) {
-        this.publiDate = publiDate;
     }
 
     public Book getBook() {

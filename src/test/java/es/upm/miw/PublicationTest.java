@@ -27,6 +27,11 @@ public class PublicationTest {
     }
 
     @Test
+    void testId(){
+        assertEquals("0", this.publication.getId());
+    }
+
+    @Test
     void testSigned() {
         assertFalse(publication.getSigned());
     }
@@ -67,5 +72,10 @@ public class PublicationTest {
     @Test
     void testReadersLength() {
         assertEquals(0, this.publication.getReaders().size());
+    }
+
+    @Test
+    void testPubliDateYear(){
+        assertEquals(2019, this.publication.getPubliDate().getYear());
     }
 }

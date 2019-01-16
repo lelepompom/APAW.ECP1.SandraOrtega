@@ -13,10 +13,6 @@ public class Feedback {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
     public Integer getLikes(){
         return this.likes;
     }

@@ -16,6 +16,11 @@ public class BookTest {
     }
 
     @Test
+    void testId(){
+        assertEquals("", this.book.getId());
+    }
+
+    @Test
     void testTitle(){
         assertEquals("Design as art", this.book.getTitle());
     }
