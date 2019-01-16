@@ -2,7 +2,7 @@ package es.upm.miw;
 
 public abstract class BookComponent {
 
-    public String name;
+    protected String name;
 
     public BookComponent(String name){
         this.name = name;

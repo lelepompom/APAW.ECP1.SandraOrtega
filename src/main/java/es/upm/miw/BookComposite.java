@@ -18,13 +18,11 @@ public class BookComposite extends BookComponent {
 
     @Override
     public void add(BookComponent cc) {
-        assert cc != null;
         collection.add(cc);
     }
 
     @Override
     public void remove(BookComponent cc) {
-        assert cc != null;
         collection.remove(cc);
     }
 
