@@ -1,3 +1,6 @@
+import Entities.Genre;
+import Entities.Publication;
+import Entities.Reader;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

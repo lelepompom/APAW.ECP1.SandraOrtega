@@ -1,3 +1,5 @@
+import Entities.Publication;
+
 import java.util.HashMap;
 import java.util.Map;
 

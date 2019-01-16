@@ -1,9 +1,12 @@
+package Entities;
+
 public class Book {
     private String id;
     private String title;
     private String author;
 
     public Book(){
+        this.id = "";
         this.title = "";
         this.author = "";
     }
