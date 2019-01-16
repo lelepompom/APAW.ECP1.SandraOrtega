@@ -6,9 +6,12 @@ public class Reader {
     private Integer age;
 
     public  Reader(String name, Integer age){
-        this.id = "";
         this.name = name;
         this.age = age;
+    }
+
+    public String getId() {
+        return this.id;
     }
 
     public String getName(){

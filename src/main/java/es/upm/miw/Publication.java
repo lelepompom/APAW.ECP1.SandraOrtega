@@ -18,7 +18,7 @@ public class Publication {
         this.signed = false;
         this.publiDate = LocalDateTime.now();
         this.genre = null;
-        this.readers = new ArrayList<Reader>();
+        this.readers = new ArrayList<>();
     }
 
     public String getId() {
