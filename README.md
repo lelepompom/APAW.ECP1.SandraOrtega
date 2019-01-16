@@ -14,8 +14,8 @@ El ejemplo que se plantea trata de una librería en la que se hacen publicacione
 * Book `id : String`  `title : String`  `author : String`
 * Reader `id : String`  `name : String`  `age : Integer`
 * enum Genre `MATHS`  `ARTS`  `DESIGN`
-* Publication `id : String`, `signed : Boolean`, `publiDate : LocalDateTime`, `Book : book`,  `List<Reader> : readers`, Genre : genre`
-* Feedback id `String`, likes `Integer`
+* Publication `id : String`, `signed : Boolean`, `publiDate : LocalDateTime`, `Book : book`,  `List<Reader> : readers`, `Genre : genre`
+* Feedback `id: String`, `likes: Integer`
 #### Diseño de entidades
 ![UML DIAGRAM](http://https://github.com/lelepompom/APAW.ECP1.SandraOrtega/blob/master/UML.png)
 
