@@ -6,6 +6,7 @@ public class Book {
     private String author;
 
     public Book(){
+        this.id = "";
         this.title = "";
         this.author = "";
     }

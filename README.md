@@ -8,14 +8,14 @@ El ejemplo que se plantea trata de una librería en la que se hacen publicacione
 * Cada publicación está asociado a 0 o varios lectores. Un lector sigue 1 o varias publicaciones.
 * Cada publicación contiene un libro.
 * Cada publicación es de un género. De cada género hay 0 o varias publicaciones.
-* Entities.Feedback recoge opiniones de la librería.
+* Feedback recoge opiniones de la librería.
 
 ### Entidades
-* Entities.Book `id : String`  `title : String`  `author : String`
-* Entities.Reader `id : String`  `name : String`  `age : Integer`
-* enum Entities.Genre `MATHS`  `ARTS`  `DESIGN`
-* Entities.Publication `id : String`, `signed : Boolean`, `publiDate : LocalDateTime`, `Entities.Book : book`,  `List<Entities.Reader> : readers`, `Entities.Genre : genre`
-* Entities.Feedback `id: String`, `likes: Integer`
+* Book `id : String`  `title : String`  `author : String`
+* Reader `id : String`  `name : String`  `age : Integer`
+* enum Genre `MATHS`  `ARTS`  `DESIGN`
+* Publication `id : String`, `signed : Boolean`, `publiDate : LocalDateTime`, `Book : book`,  `List<Reader> : readers`, `Genre : genre`
+* Feedback `id: String`, `likes: Integer`
 #### Diseño de entidades
 ![UML DIAGRAM](http://https://github.com/lelepompom/APAW.ECP1.SandraOrtega/blob/master/UML.png)
 
