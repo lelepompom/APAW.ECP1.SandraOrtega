@@ -8,16 +8,18 @@ public class BookTest {
 
     @BeforeEach
     void before(){
-        this.book = new Book("Design as art", "Bruno Munari");
+        this.book = new Book();
+        this.book.setTitle("Design as art");
+        this.book.setAuthor("Bruno Munari");
     }
 
     @Test
     void testTitle(){
-        assertEquals("Design as art", book.getTitle());
+        assertEquals("Design as art", this.book.getTitle());
     }
 
     @Test
     void testAuthor() {
-        assertEquals("Bruno Munari", book.getAuthor());
+        assertEquals("Bruno Munari", this.book.getAuthor());
     }
 }

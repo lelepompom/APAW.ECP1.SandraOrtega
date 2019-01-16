@@ -1,20 +1,22 @@
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Publication {
     private String id;
+    private Book book;
     private Boolean signed;
     private LocalDateTime publiDate;
-    private Book book;
     private Genre genre;
     private List<Reader> readers;
 
-    public Publication(Boolean signed, String title, String author, Genre genre, List<Reader> readers){
-        this.signed = signed;
+    public Publication(String id){
+        this.id = id;
+        this.book = new Book();
+        this.signed = false;
         this.publiDate = LocalDateTime.now();
-        this.book = new Book(title, author);
-        this.genre = genre;
-        this.readers = readers;
+        this.genre = null;
+        this.readers = new ArrayList<Reader>();
     }
 
     public String getId() {
