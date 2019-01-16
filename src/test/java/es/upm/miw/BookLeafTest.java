@@ -30,11 +30,11 @@ public class BookLeafTest {
 
     @Test
     void cannotAdd(){
-        assertThrows(UnsupportedOperationException.class, () -> this.bookLeaf.add(new BookComposite("", "")));
+        assertThrows(UnsupportedOperationException.class, () -> this.bookLeaf.add(new BookComposite("")));
     }
 
     @Test
     void cannotRemove(){
-        assertThrows(UnsupportedOperationException.class, () -> this.bookLeaf.remove(new BookComposite("", "")));
+        assertThrows(UnsupportedOperationException.class, () -> this.bookLeaf.remove(new BookComposite("")));
     }
 }

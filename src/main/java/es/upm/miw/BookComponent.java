@@ -2,12 +2,10 @@ package es.upm.miw;
 
 public abstract class BookComponent {
 
-    private String title;
-    private String author;
+    public String name;
 
-    public BookComponent(String title, String author){
-        this.title = title;
-        this.author = author;
+    public BookComponent(String name){
+        this.name = name;
     }
 
     public abstract void add(BookComponent cc);

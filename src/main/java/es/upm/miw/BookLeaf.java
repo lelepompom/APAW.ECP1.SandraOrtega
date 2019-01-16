@@ -5,7 +5,7 @@ public class BookLeaf extends BookComponent {
     private Book book;
 
     public BookLeaf(Book book){
-        super(book.getTitle(), book.getAuthor());
+        super(book.getId());
         this.book = book;
     }
 

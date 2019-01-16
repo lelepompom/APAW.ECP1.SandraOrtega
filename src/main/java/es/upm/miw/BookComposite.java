@@ -7,9 +7,13 @@ public class BookComposite extends BookComponent {
 
     private List<BookComponent> collection;
 
-    public BookComposite(String title, String author){
-        super(title, author);
+    public BookComposite(String name){
+        super(name);
         this.collection = new ArrayList<>();
+    }
+
+    public List<BookComponent> getCollection() {
+        return collection;
     }
 
     @Override
@@ -31,6 +35,6 @@ public class BookComposite extends BookComponent {
 
     @Override
     public String view() {
-        return collection.stream().toString();
+        return this.name;
     }
 }
