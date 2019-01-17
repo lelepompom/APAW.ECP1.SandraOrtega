@@ -1,12 +1,12 @@
 package es.upm.miw;
 
-public class Feedback {
+public class FeedbackDec implements FeedbackStrategy {
     private String id;
     private Integer likes;
 
-    public Feedback(String id, Integer likes){
+    public FeedbackDec(String id){
         this.id = id;
-        this.likes = likes;
+        this.likes = 0;
     }
 
     public String getId() {
@@ -17,7 +17,8 @@ public class Feedback {
         return this.likes;
     }
 
-    public void setLikes(Integer likes){
-        this.likes = likes;
+    @Override
+    public int likes() {
+        return this.likes++;
     }
 }

@@ -6,26 +6,55 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FeedbackTest {
-    private Feedback feedback;
+    private FeedbackContext feedbackContext = new FeedbackContext();
+    private FeedbackDec feedbackDec = new FeedbackDec("1");
+    private FeedbackHex feedbackHex = new FeedbackHex("16");
 
     @BeforeEach
     void before(){
-        this.feedback = new Feedback("1", 3);
+        feedbackContext.setFeedbackStrategy(feedbackDec);
     }
 
     @Test
     void testId(){
-        assertEquals("1", this.feedback.getId());
+        assertEquals("1", this.feedbackDec.getId());
     }
 
     @Test
     void testGetLikes(){
-        assertEquals("3", this.feedback.getLikes().toString());
+        assertEquals("0", this.feedbackDec.getLikes().toString());
     }
 
     @Test
     void testSetTitle(){
-        this.feedback.setLikes(5);
-        assertEquals("5", this.feedback.getLikes().toString());
+        this.feedbackContext.giveFeedback();
+        this.feedbackContext.giveFeedback();
+        this.feedbackContext.giveFeedback();
+        this.feedbackContext.giveFeedback();
+        this.feedbackContext.giveFeedback();
+        assertEquals("5", this.feedbackDec.getLikes().toString());
+    }
+
+
+    @Test
+    void testHexId(){
+        assertEquals("16", this.feedbackHex.getId());
+    }
+
+    @Test
+    void testHexGetLikes(){
+        feedbackContext.setFeedbackStrategy(feedbackHex);
+        assertEquals("0", this.feedbackHex.getLikes());
+    }
+
+    @Test
+    void testHexSetTitle(){
+        feedbackContext.setFeedbackStrategy(feedbackHex);
+        this.feedbackContext.giveFeedback();
+        this.feedbackContext.giveFeedback();
+        this.feedbackContext.giveFeedback();
+        this.feedbackContext.giveFeedback();
+        this.feedbackContext.giveFeedback();
+        assertEquals("5", this.feedbackHex.getLikes());
     }
 }
