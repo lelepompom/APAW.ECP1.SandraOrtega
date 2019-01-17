@@ -3,7 +3,7 @@ package es.upm.miw;
 import java.util.HashMap;
 import java.util.Map;
 
-public class PublicationFactory {
+public class PublicationFactory extends Observable {
 
     private static final PublicationFactory publicationFactory = new PublicationFactory();
 
@@ -21,8 +21,9 @@ public class PublicationFactory {
         return publicationRegister.get(key);
     }
 
-    public Publication setPublication(Publication publication){
-        return publicationRegister.put(publication.getId(),publication);
+    public void setPublication(Publication publication){
+        publicationRegister.put(publication.getId(),publication);
+        this.notifyObservers(publication.getId());
     }
 
     public void removePublication(String key){
